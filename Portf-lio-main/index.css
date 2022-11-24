@@ -1,0 +1,160 @@
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #101010;
+    width: 90%;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+nav {
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    color: rgb(243, 243, 243);
+    font-weight: bolder;
+    border-bottom: 1px solid #cc2735;
+    width: 90%;
+    position: fixed;
+    background: #101010;
+    margin-top: -50px;
+}
+
+ul {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    width: 500px;
+    overflow: hidden;
+}
+
+li {
+    /* border: 1px solid blue; */
+    letter-spacing: 2px;
+    text-align: center;
+    width: 120px;
+    transition: 600ms;
+    cursor: pointer;
+}
+
+li:hover {
+    letter-spacing: 5px;
+    color: rgb(221, 42, 57);
+}
+
+span {
+    /* border: 1px solid purple; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80px;
+    margin-right: 50px;
+}
+
+span img {
+    width: 30px;
+}
+
+span a {
+    display: flex;
+    align-items: center;
+    transition: 400ms;
+    margin-left: 20px;
+}
+
+span a:hover {
+    transform: scale(1.2);
+}
+
+.section1 {
+    margin: 0 auto;
+    /* border: 1px solid red; */
+    height: 400px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    overflow: hidden;
+}
+
+.apresentar {
+    text-align: right;
+    font-size: min(60px, 9vw);
+    /* border: 1px solid salmon; */
+    height: 220px;
+    width: 750px;
+    float: right;
+    background-image: linear-gradient(to top right, rgb(218, 44, 73), #cc2727);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: 500ms;
+    cursor: default;
+}
+
+.apresentar:hover {
+    background-image: linear-gradient(to bottom left, rgb(218, 44, 73), #cc2727);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: 1px;
+}
+
+.apresentar h1 {
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+
+.section2 {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 400px;
+    margin-top: 10px;
+    /* border: 1px solid orange; */
+}
+
+.caixa {
+    /* border: 1px solid orange; */
+    width: 500px;
+    height: 100%;
+    color: rgb(199, 199, 199);
+    transition: 500ms;
+    border-bottom: 1px solid;
+    border-color: #cc2735;
+    margin-bottom: 90px;
+    cursor: pointer;
+}
+
+.caixa:hover {
+    color: #ffffff;
+    transition: 500ms;
+    border-bottom: 10px solid;
+    border-color: #cc2735;
+    border-radius: 10px;
+}
+
+.caixa h3 {
+    font-weight: 450;
+    margin-bottom: 30px;
+}
+
+.imagem {
+    height: 0;
+    /* border: 1px solid blue; */
+    text-align: right;
+    margin-right: 20px;
+}
+.imagem img {
+    width: 50px;
+    margin-top: -30px;
+}
