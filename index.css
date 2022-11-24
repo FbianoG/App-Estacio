@@ -113,8 +113,9 @@ span a:hover {
     justify-content: right;
     align-items: center;
     overflow: hidden;
+    transition: 400ms;
+    
 }
-
 .apresentar {
     text-align: right;
     font-size: min(60px, 9vw);
@@ -172,7 +173,7 @@ span a:hover {
 }
 
 .caixa h3 {
-    font-weight: 450;
+    font-weight: 500;
     margin-bottom: 30px;
 }
 
@@ -206,3 +207,18 @@ span a:hover {
     letter-spacing: 2px;
     opacity: 1;
 }
+
+
+#back {
+    opacity: 0.1;
+    height: min(20vw,70px);
+    z-index: 1;
+    width: 90%;
+    rotate: -1deg;
+    transition: 400ms;
+    position: absolute;
+    top: 400px;
+}
+
+
+
