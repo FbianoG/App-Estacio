@@ -1,0 +1,335 @@
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    
+    scroll-margin-top: 15em;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+    background-color: #252525;
+}
+
+::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(to bottom, rgb(218, 44, 73), #cc2727);
+    height: 20px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #fff;
+}
+
+
+body {
+    background-color: #101010;
+    width: 90%;
+    margin: 0 auto;
+    overflow-x: hidden;
+    /* border: 1px solid greenyellow; */
+    padding-top: 70px;
+}
+
+nav {
+    /* border: 1px solid rgb(7, 11, 248); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    font-weight: bolder;
+    border-bottom: 1px solid #cc273569;
+    position: fixed;
+    top: 0;
+    width: 90%;
+    background: #101010;
+    z-index: 1;
+}
+
+ul {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    width: 500px;
+    overflow: hidden;
+}
+
+li {
+    /* border: 1px solid blue; */
+    text-align: center;
+    width: 120px;
+}
+
+
+li a {
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: rgb(243, 243, 243);
+    transition: 500ms;
+    
+}
+
+li a:hover {
+    color: rgb(116, 116, 116);
+}
+
+nav span {
+    /* border: 1px solid purple; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80px;
+    margin-right: 50px;
+}
+
+span img {
+    width: 30px;
+}
+
+nav span a {
+    display: flex;
+    align-items: center;
+    transition: 400ms;
+    margin-left: 20px;
+}
+
+span a:hover {
+    transform: scale(1.2);
+}
+
+.section1 {
+    /* border: 1px solid red; */
+    transition: 400ms;
+    padding-top: 50px;
+    height: auto;
+}
+.apresentar {
+    margin: 0 auto;
+    text-align: right;
+    font-size: min(60px, 9vw);
+    /* border: 1px solid salmon; */
+    max-width: 1500px;
+    background-image: linear-gradient(to top right, #1515151e, #252525);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    cursor: default;
+    margin-bottom: 100px;
+}
+
+.especial {
+    max-width: 1300px;
+    background-image: linear-gradient(to top right, rgba(218, 44, 73, 0.459), #cc2727);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.apresentar22 {
+    color: #fff;
+    margin-top: 80px;
+    padding: 15px;
+    padding-bottom: 50px;
+    margin-bottom: 100px;
+    text-align: left;
+    font-size: min(30px, 5vw);
+    font-weight: 300;
+    transition: 500ms;
+}
+
+
+.apresentar h1 {
+    margin-top: -25px;
+    margin-bottom: -25px;
+    transition: 200ms;
+}
+
+
+
+.apresentar2 {
+    /* border: 1px solid salmon; */
+    min-height: 600px;
+    width: 100%;
+    transition: 500ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+}
+
+.apresentar2-1 {
+    color: rgb(214, 214, 214);
+    /* border: 1px solid green; */
+    width: 60%;
+    min-width: 380px;
+    height: 100%;
+    padding: 30px;
+    transition: 400ms;
+
+}
+
+
+.apresentar2-1 label {
+    color: #cc2735;
+    font-size: 15px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+}
+.apresentar2-1 h1 {
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+.apresentar2-1 p {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.inputs {
+    margin-top: 100px;
+}
+
+.inputs input {
+    padding: 5px;
+    min-width: 50px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    color: #909090;
+    background: #000000cb;
+    border: none;
+    border-radius: 3px;
+    transition: 300ms;
+    cursor: pointer;
+}
+
+.inputs input:hover {
+    background-image: linear-gradient(to bottom left, rgb(218, 44, 73), #cc2727);
+    color: black;
+    transform: scale(1.2);
+}
+
+
+
+
+.apresentar2-2 {
+    color: rgb(255, 255, 255);
+    /* border: 1px solid green; */
+    width: 40%;
+    min-width: 300px;
+    height: 100%;
+    padding: 15px;
+}
+
+.apresentar2-2 div {
+    /* border: 1px solid green; */
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+.apresentar2-2 img {
+    height: 30vw;
+    max-height: 300px;
+    min-height: 200px;
+    width: 100%;
+    max-width: 400px;
+    border-top-right-radius: 20%;
+    border-top-left-radius: 40%;
+    border-bottom-right-radius: 30%;
+    border-bottom-left-radius: 20%;
+    transition: 500ms;
+    box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.521);
+}
+
+.apresentar2-2 img:hover {
+    transform: scale(1.03);
+    box-shadow: 9px 9px 20px rgba(0, 0, 0, 0.521);
+}
+
+
+
+
+
+
+.section2 {
+    padding-top: 120px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* border: 1px solid orange; */
+}
+
+.caixa {
+    /* border: 1px solid orange; */
+    width: 500px;
+    min-height: 420px;
+    color: rgb(199, 199, 199);
+    transition: 500ms;
+    border-bottom: 1px solid;
+    border-color: #cc2735;
+    margin-bottom: 90px;
+    cursor: pointer;
+}
+
+.caixa:hover {
+    color: #ffffff;
+    transition: 200ms;
+    border-bottom: 10px solid;
+    border-color: #cc2735;
+    border-radius: 10px;
+}
+
+.caixa h3 {
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.imagem {
+    height: 0;
+    /* border: 1px solid blue; */
+    text-align: right;
+    margin-right: 20px;
+
+}
+
+.imagem img {
+    width: 50px;
+    margin-top: -30px;
+    transition: 400ms;
+}
+
+.caixa:hover img {
+    transform: scale(1.2);
+}
+
+.caixa label {
+    display: inline;
+    color: #606060;
+    transition: 300ms;
+    opacity: 0;
+}
+
+.caixa:hover label {
+    color: #cc2735;
+    letter-spacing: 2px;
+    opacity: 1;
+}
+
+
+#back {
+    opacity: 0.1;
+    height: min(20vw,70px);
+    z-index: 1;
+    width: 90%;
+    rotate: -1deg;
+    transition: 400ms;
+    position: absolute;
+    top: 400px;
+}
+
+
