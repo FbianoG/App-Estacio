@@ -72,6 +72,7 @@ li a {
     letter-spacing: 2px;
     color: rgb(243, 243, 243);
     transition: 500ms;
+    font-weight: 300;
     
 }
 
