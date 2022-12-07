@@ -173,7 +173,6 @@ span a:hover {
     height: 100%;
     padding: 30px;
     transition: 400ms;
-
 }
 
 
@@ -201,7 +200,7 @@ span a:hover {
     min-width: 50px;
     margin-right: 5px;
     margin-bottom: 10px;
-    color: #303030;
+    color: #fff;
     background: #000000cb;
     border: none;
     border-radius: 3px;
