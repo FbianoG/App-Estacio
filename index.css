@@ -277,7 +277,7 @@ span a:hover {
 }
 
 .caixa:hover {
-    color: #ffffff;
+    color: #000;
     transition: 200ms;
     border-bottom: 10px solid;
     border-color: #cc2735;
