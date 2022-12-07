@@ -310,6 +310,7 @@ span a:hover {
 .caixa label {
     display: inline;
     color: #000;
+    font-weight: 500;
     transition: 300ms;
     opacity: 0;
 }
