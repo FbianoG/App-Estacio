@@ -13,7 +13,7 @@ html {
 
 ::-webkit-scrollbar {
     width: 7px;
-    background-color: #252525;
+    background-color: #e2e2e2;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -23,7 +23,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #fff;
+    background: #000;
 }
 
 
@@ -70,14 +70,14 @@ li {
 li a {
     text-decoration: none;
     letter-spacing: 2px;
-    color: rgb(243, 243, 243);
+    color: #050505;
     transition: 500ms;
-    font-weight: 300;
+    font-weight: 550;
     
 }
 
 li a:hover {
-    color: #101010;
+    color: #909090;
 }
 
 nav span {
@@ -166,7 +166,7 @@ span a:hover {
 }
 
 .apresentar2-1 {
-    color: rgb(214, 214, 214);
+    color: #303030;
     /* border: 1px solid green; */
     width: 60%;
     min-width: 380px;
@@ -269,7 +269,7 @@ span a:hover {
     /* border: 1px solid orange; */
     width: 500px;
     min-height: 420px;
-    color: rgb(199, 199, 199);
+    color: #303030;
     transition: 500ms;
     border-bottom: 1px solid;
     border-color: #cc2735;
@@ -310,7 +310,7 @@ span a:hover {
 
 .caixa label {
     display: inline;
-    color: #606060;
+    color: #000;
     transition: 300ms;
     opacity: 0;
 }
