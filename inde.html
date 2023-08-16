@@ -50,6 +50,7 @@
             height: 90px;
             border-radius: 100%;
             margin: 0 auto;
+            overflow: hidden;
         }
 
         .mais {
@@ -111,21 +112,25 @@
             font-weight: default;
             font-size: 12px;
         }
+
+        #imagemExibida {
+            width: 100%;
+        }
     </style>
 </head>
 
 <body>
 
     <div class="cabeca">
-        <div class="foto">NB</div>
-        <div class="nome" id="nome">Nome do Brabo</div>
+        <div class="foto"><img src="" alt="" id="imagemExibida"></div>
+        <div class="nome" id="nome" style="height: 31px;">Nome do Brabo</div>
         <img class="mais" src="mais.png" alt="">
     </div>
 
     <div class="conteudo">
         <div class="campo">
             <label for="">CPF</label>
-            <p id="cpf">111.222.333-44</p>
+            <p id="cpf" style="height: 19px;">111.222.333-44</p>
         </div>
         <div class="campo">
             <label for="">Nascimento</label>
@@ -173,7 +178,17 @@
             document.getElementById('cpf').innerText = localStorage.getItem('cpf', cpf)
             document.getElementById('nasc').innerText = localStorage.getItem('nasc', nasc)
             
-        
+             const imagemExibida = document.getElementById("imagemExibida");
+
+        // Recuperando a string base64 da imagem do localStorage
+        const imagemBase64 = localStorage.getItem("imagemSalva");
+
+        if (imagemBase64 !== null) {
+            // Definindo a string base64 como a fonte da imagem
+            imagemExibida.src = imagemBase64;
+        } else {
+            console.log("Nenhuma imagem encontrada no localStorage.");
+        }
 
     </script>
 
