@@ -103,17 +103,6 @@
             document.getElementById('nomee').innerText = localStorage.getItem('nome', nome)
             document.getElementById('emaill').innerText = localStorage.getItem('email', email)
             document.getElementById('telefonee').innerText = localStorage.getItem('telefone', telefone)
-            const imagemExibida = document.getElementById("imagemExibida");
-
-        // Recuperando a string base64 da imagem do localStorage
-        const imagemBase64 = localStorage.getItem("imagemSalva");
-
-        if (imagemBase64 !== null) {
-            // Definindo a string base64 como a fonte da imagem
-            imagemExibida.src = imagemBase64;
-        } else {
-            console.log("Nenhuma imagem encontrada no localStorage.");
-        }
         }
 
         function gerar() {
@@ -132,10 +121,32 @@
             document.getElementById('nomee').innerText = nome
             document.getElementById('emaill').innerText = email
             document.getElementById('telefonee').innerText = telefone
-
-
             document.getElementById('deep').style.display = 'none'
 
+            let imagemInput = document.getElementById('imagemInput')
+            let salvarImagem = document.getElementById('salvarImagem')
+            let file = imagemInput.files[0]
+            if (file) {
+                let reader = new FileReader()
+                reader.onload = function (event) {
+                    let imagemBase64 = event.target.result
+                    localStorage.setItem('imagemSalva', imagemBase64)
+                    console.log('Imagem salva')
+                }
+                reader.readAsDataURL(file)
+            } else {
+                console.log('Imagem não salva')
+            }
+
+            const imagemExibida = document.getElementById("imagemExibida");
+            // Recuperando a string base64 da imagem do localStorage
+            const imagemBase64 = localStorage.getItem("imagemSalva");
+            if (imagemBase64 !== null) {
+                // Definindo a string base64 como a fonte da imagem
+                imagemExibida.src = imagemBase64;
+            } else {
+                console.log("Nenhuma imagem encontrada no localStorage.");
+            }
 
         }
 
@@ -152,23 +163,8 @@
 
 
 
-        let imagemInput = document.getElementById('imagemInput')
-        let salvarImagem = document.getElementById('salvarImagem')
 
-        salvarImagem.addEventListener('click', function () {
-            let file = imagemInput.files[0]
-            if (file) {
-                let reader = new FileReader()
-                reader.onload = function (event) {
-                    let imagemBase64 = event.target.result
-                    localStorage.setItem('imagemSalva', imagemBase64)
-                    console.log('imagem salva')
-                }
-                reader.readAsDataURL(file)
-            } else {
-                console.log('nada de imagem')
-            }
-        })
+
 
 
         const imagemExibida = document.getElementById("imagemExibida");

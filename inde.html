@@ -122,9 +122,9 @@
 <body>
 
     <div class="cabeca">
-        <div class="foto"><img src="" alt="" id="imagemExibida"></div>
+        <div class="foto" id="foto"  onclick="menos()"><img src="" alt="" id="imagemExibida"></div>
         <div class="nome" id="nome" style="height: 31px;">Nome do Brabo</div>
-        <img class="mais" src="mais.png" alt="">
+        <img class="mais" src="mais.png" alt="" id="mais" onclick="mais()">
     </div>
 
     <div class="conteudo">
@@ -188,6 +188,18 @@
             imagemExibida.src = imagemBase64;
         } else {
             console.log("Nenhuma imagem encontrada no localStorage.");
+        }
+
+        function mais() {
+            document.getElementById('foto').style.scale = '1.8'
+            document.getElementById('mais').style.display = 'none'
+             document.getElementById('nome').style.marginTop = '40px'
+        }
+
+        function menos() {
+            document.getElementById('foto').style.scale = '1'
+            document.getElementById('mais').style.display = 'inline'
+            document.getElementById('nome').style.marginTop = '15px'
         }
 
     </script>
