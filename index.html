@@ -5,234 +5,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <style>
-    * {
-        box-sizing: border-box;
-        text-decoration: none;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    }
 
-    body {
-        height: 1150px;
-        background-image: linear-gradient(to bottom, rgb(37, 68, 207) 457px, rgb(238, 238, 238) 400px);
-    }
-
-    .cabeca {
-        margin-top: 60px;
-        height: 200px;
-        text-align: center;
-    }
-
-    .foto {
-        margin: 0 auto;
-        width: 50px;
-        height: 50px;
-        border: 1px solid black;
-        border-radius: 100%;
-        background: black;
-        color: white;
-        font-size: 22px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .camera {
-        margin: 0 auto;
-        margin-top: -24px;
-        margin-left: 51%;
-        margin-bottom: 30px;
-        width: 35px;
-        height: 35px;
-        border: 2px solid rgb(169, 215, 247);
-        border-radius: 100%;
-        overflow: hidden;
-        background: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .camera img {
-        width: 60%;
-        height: 60%;
-    }
-
-    .nome {
-        margin-top: -15px;
-        font-size: 22px;
-        color: white;
-        margin-bottom: 25px;
-    }
-
-    .email {
-        font-size: 17px;
-        color: rgb(233, 233, 233);
-        margin-top: 10px;
-    }
-
-    .curso {
-        font-size: 17px;
-        color: rgb(233, 233, 233);
-        margin-top: 20px;
-        margin-left: 12px;
-        margin-bottom: 25px;
-    }
-
-    .carteiraTop {
-        margin: 0 auto;
-        width: 95%;
-        height: 130px;
-        background: rgba(255, 255, 255, 0.253);
-        border-radius: 25px;
-        border-bottom-left-radius: 0px;
-        border-bottom-right-radius: 0px;
-    }
-
-    .carteiraTop img {
-        margin-top: 20px;
-        margin-left: 20px;
-        width: 150px;
-    }
-
-    .carteiraBot {
-        margin: 0 auto;
-        background: white;
-        width: 95%;
-        height: 90px;
-        border-bottom-left-radius: 25px;
-        border-bottom-right-radius: 25px;
-        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.452);
-    }
-
-    .legenda {
-        height: 100%;
-        display: flex;
-        justify-content: center;
-    }
-
-    .legenda1 {
-        width: 50%;
-        padding-left: 55px;
-        margin-top: 10px;
-    }
-
-    .legenda2 {
-        margin-top: 10px;
-        width: 50%;
-        padding-left: 55px;
-    }
-
-    .legenda p {
-        font-size: 14px;
-        margin-bottom: -10px;
-    }
-
-
-    footer {
-        position: fixed;
-        background: white;
-        height: 80px;
-        width: 100%;
-        bottom: 0;
-        left: 0;
-    }
-
-    .menu {
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding-left: 0;
-        font-size: 14px;
-        color: rgb(133, 133, 133);
-
-    }
-
-    li {
-        list-style: none;
-
-    }
-
-    a {
-        text-decoration: none;
-        color: black;
-    }
-
-    .imagens {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        height: 30px;
-        margin-bottom: -10px;
-        padding-left: 0;
-    }
-
-    .expandir {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 15px;
-        opacity: 0.7;
-        gap: 10px;
-        margin-top: 30px;
-    }
-
-    .expandir img {
-        width: 12px;
-        opacity: 0.8;
-    }
-
-    .boxes {
-        margin: 0 auto;
-        width: 95%;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        row-gap: 20px;
-    }
-
-    .box {
-        display: flex;
-        align-items: flex-end;
-        border: 1px solid #d6d6d6;
-        width: 48%;
-        padding: 15px;
-        background: white;
-        border-radius: 8px;
-        height: 150px;
-
-    }
-
-    .fim {
-        text-align: center;
-        margin-top: -20px;
-    }
-
-    .fim p {
-        opacity: 0.5;
-        font-size: 13px;
-    }
-
-    .fim h4 {
-        color: rgb(46, 82, 199);
-    }
-    .expandir:hover {
-        opacity: 0.4;
-    }
 </style>
 
 <body>
+    <div class="deep" id="deep">
+        <input type="text" placeholder="Nome Completo" id="nome">
+        <input type="text" placeholder="CPF com ponto e traço" id="cpf">
+        <input type="text" placeholder="Email" id="email">
+        <input type="text" placeholder="Tel ex: (21) 99999-9999" id="telefone">
+        <input type="text" placeholder="Nasc ex: 99 jul 1995" id="nasc">
+        <input type="button" value="Gerar" onclick="gerar()">
+        <input type="button" name="" id="" value="Restaurar" onclick="padrao()">
+    </div>
+
     <div class="cabeca">
         <div class="foto">F</div>
         <div class="camera"><img
                 src="data:image/png;base64,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"
                 alt=""></div>
-        <div class="nome">Nome do Brabo</div>
-        <div class="email">Seuemail@gmail.com</div>
-        <div class="email" style="color: white;">(21) 99778-8866</div>
+        <div class="nome" id="nomee">Teste</div>
+        <div class="email" id="emaill">Seuemail@gmail.com</div>
+        <div class="email" style="color: white;" id="telefonee">(21) 99778-8866</div>
     </div>
     <div class="conteudo">
         <div class="curso">Administração</div>
@@ -244,17 +42,18 @@
                 <div class="legenda">
                     <div class="legenda1">
                         <p>Matrícula</p>
-                        <p>2016 0747 5599</p>
+                        <p>2019 0747 5599</p>
                     </div>
                     <div class="legenda2">
                         <p>Validade</p>
-                        <p>8 Jul 2023</p>
+                        <p>8 Jul 2024</p>
                     </div>
                 </div>
             </div>
-        <div class="expandir"><img src="https://cdn-icons-png.flaticon.com/512/54/54301.png" alt=""> Acessar
+            <div class="expandir"><img src="https://cdn-icons-png.flaticon.com/512/54/54301.png" alt=""> Acessar
                 carteirinha
-            </div></a>
+            </div>
+        </a>
         <br>
         <p style="opacity: 0.8; font-size: 17px; margin-left: 12px;">Menu perfil</p>
         <div class="boxes">
@@ -273,29 +72,7 @@
             <p>Versão do Aplicativo 5.14.1.</p>
             <h4>Sair do APP</h4>
         </div>
-
-
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <footer>
         <nav>
             <ul class="imagens">
@@ -309,13 +86,56 @@
                 <li>Início</li>
                 <li>Financeiro</li>
                 <li>Solicitações</li>
-                <li style="color: rgb(48, 74, 189);">Perfil</li>
+                <li style="color: rgb(48, 74, 189);" onclick="deepar()">Perfil</li>
             </ul>
         </nav>
     </footer>
 
 
+    <script>
+            document.getElementById('nomee').innerText = localStorage.getItem('nome', nome)
+        if (document.getElementById('nomee').innerText == 'Teste' || document.getElementById('nomee').innerText == '') {
+                 document.getElementById('nomee').innerText = "Teste"
+        } 
+        else {
+           document.getElementById('nomee').innerText = localStorage.getItem('nome', nome)
+        document.getElementById('emaill').innerText = localStorage.getItem('email', email)
+        document.getElementById('telefonee').innerText = localStorage.getItem('telefone', telefone) 
+        }
 
+        function gerar() {
+            let nome = document.getElementById('nome').value
+            let cpf = document.getElementById('cpf').value
+            let email = document.getElementById('email').value
+            let telefone = document.getElementById('telefone').value
+            let nasc = document.getElementById('nasc').value
+
+            localStorage.setItem('nome', nome)
+            localStorage.setItem('cpf', cpf)
+            localStorage.setItem('email', email)
+            localStorage.setItem('telefone', telefone)
+            localStorage.setItem('nasc', nasc)
+
+            document.getElementById('nomee').innerText = nome
+            document.getElementById('emaill').innerText = email
+            document.getElementById('telefonee').innerText = telefone
+
+
+            document.getElementById('deep').style.display = 'none'
+
+
+        }
+
+        function deepar() {
+            document.getElementById('deep').style.display = 'block'
+        }
+
+        function padrao() {
+            localStorage.clear()
+            document.getElementById('deep').style.display = 'none'
+            location.reload()
+        }
+    </script>
 
 
 </body>

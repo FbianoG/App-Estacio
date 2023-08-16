@@ -118,18 +118,18 @@
 
     <div class="cabeca">
         <div class="foto">NB</div>
-        <div class="nome">Nome do Brabo</div>
+        <div class="nome" id="nome">Nome do Brabo</div>
         <img class="mais" src="mais.png" alt="">
     </div>
 
     <div class="conteudo">
         <div class="campo">
             <label for="">CPF</label>
-            <p>111.222.333-44</p>
+            <p id="cpf">111.222.333-44</p>
         </div>
         <div class="campo">
             <label for="">Nascimento</label>
-            <p>09 Dez 1999</p>
+            <p id="nasc">09 Dez 1999</p>
         </div>
         <div class="campo">
             <label for="">Matrícula</label>
@@ -137,11 +137,11 @@
         </div>
         <div class="campo">
             <label for="">Validade</label>
-            <p>15 Jul 2023</p>
+            <p>08 Jul 2024</p>
         </div>
         <div class="campo campus">
             <label for="">Graduação (Ativo)</label>
-            <p>Direito</p>
+            <p>Administração</p>
         </div>
         <div class="campo campus">
             <label for="">Campus</label>
@@ -160,6 +160,22 @@
     <div class="top">
         <a href="index.html"><img src="seta.png" alt=""></a>
     </div>
+
+    <script>
+
+            localStorage.getItem('nome', nome)
+            localStorage.getItem('cpf', cpf)
+            // localStorage.getItem('email', email)
+            // localStorage.getItem('telefone', telefone)
+            localStorage.getItem('nasc', nasc)
+
+            document.getElementById('nome').innerText = localStorage.getItem('nome', nome)
+            document.getElementById('cpf').innerText = localStorage.getItem('cpf', cpf)
+            document.getElementById('nasc').innerText = localStorage.getItem('nasc', nasc)
+            
+        
+
+    </script>
 
 </body>
 
